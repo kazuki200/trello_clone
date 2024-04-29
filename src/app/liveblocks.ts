@@ -12,10 +12,17 @@ type Presence = {
   // ...
 };
 
-type Column = {
+export type Column = {
   name: string;
   id: string;
   index: number;
+};
+
+export type Card = {
+  name: string;
+  id: string;
+  index: number;
+  columnId: string;
 };
 
 // Optionally, Storage represents the shared document that persists in the
@@ -24,6 +31,7 @@ type Column = {
 // automatically persisted and synced to all connected clients.
 type Storage = {
   columns: LiveList<LiveObject<Column>>;
+  cards: LiveList<LiveObject<Card>>;
 };
 
 export const {
