@@ -39,6 +39,7 @@ export const {
   RoomProvider,
   useMyPresence,
   useStorage,
+  useUpdateMyPresence,
   /* ...all the other hooks you’re using... */
 } = createRoomContext<
   Presence,
